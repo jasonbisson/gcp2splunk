@@ -4,7 +4,7 @@ Requirements:
 User must have permission at the Organization/Folder Level. 
 User executes the script from the Google Cloud Shell to ensure API scopes are enabled and environmental variables of the 
 
-What this script will automated on the GCP side:
+What this script will do on the GCP side:
 1) Creates pub/sub topic to stream logs events
 2) Creates the aggregate sink to write to pub/sub topic at the organizational level.
 3) Grant IAM pubsub.publisher to the aggregate sink service account for the pub/sub topic.
