@@ -1,4 +1,4 @@
-Simple bash script executing gcloud commands to stream log events from Google Cloud Platform (GCP) to be consumed by a Splunk instance. 
+Simple bash script leveraging gcloud commands to configure your organization to stream log events from Google Cloud Platform (GCP) to be consumed by a Splunk instance. 
 
 Requirements:
 User must have permission at the Organization/Folder Level. 
