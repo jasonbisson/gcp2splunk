@@ -32,6 +32,9 @@ gcloud iam service-accounts create  ${splunk2gcp} --display-name "${splunk2gcp}"
 gcloud iam service-accounts keys create "${splunk2gcp}.key.json" --iam-account "${splunk2gcp}@$project_id.iam.gserviceaccount.com"
 gcloud projects add-iam-policy-binding $project_id --member 'serviceAccount:'${splunk2gcp}'@'${project_id}'.iam.gserviceaccount.com' --role 'roles/viewer' > /dev/null 2>&1
 gcloud projects add-iam-policy-binding $project_id --member 'serviceAccount:'${splunk2gcp}'@'${project_id}'.iam.gserviceaccount.com' --role 'roles/pubsub.subscriber' > /dev/null 2>&1
+}
+
+function pass2splunk () {
 echo ""
 echo "${splunk2gcp}.key.json is available to intergrate with Splunk"
 echo "Run shred -u ${splunk2gcp}.key.json to destroy the local key after Splunk intergration is complete"
@@ -45,3 +48,4 @@ create_topic
 create_sink
 subscribe_2_topic
 create_service_account
+pass2splunk
