@@ -1,8 +1,7 @@
 Simple bash script leveraging gcloud commands to stream log events for the organizations level to be consumed by a Splunk instance. 
 
 Requirements:
-User must have permission at the Organization/Folder Level. 
-User executes the script from the Google Cloud Shell to ensure API scopes are enabled and environmental variables of the 
+User must have permission at the Organization/Folder Level and ability to create a service account.
 
 What this script will do on the GCP side:
 1) Creates pub/sub topic to stream logs events
