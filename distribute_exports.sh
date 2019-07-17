@@ -52,4 +52,4 @@ gcloud projects add-iam-policy-binding $project_id --member 'serviceAccount:'${s
 audit_export
 data_export
 system_export
-#create_service_account
+create_service_account
