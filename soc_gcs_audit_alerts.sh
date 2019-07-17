@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+#set -x
 export project_id=$(gcloud config get-value project)
 export BUCKET=$project_id-expose2internet
 export BUCKET_FILE=expose2internet
