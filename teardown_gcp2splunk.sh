@@ -8,7 +8,7 @@ fi
 
 export org_name=$1
 export project_id=$(gcloud config get-value project)
-export org_id=$(gcloud organizations list --format=[no-heading] | grep ${org_name} | awk '{print $2}')
+export org_id=$(gcloud organizations list --format=[no-heading] | grep ^${org_name} | awk '{print $2}')
 export gcp2splunk=gcp2splunk
 export splunk2gcp=splunk2gcp
 
