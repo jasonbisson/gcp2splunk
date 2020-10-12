@@ -48,6 +48,6 @@ update_bucket_allAuthenticatedUsers
 update_bucket_file_allAuthenticatedUsers
 update_bucket_allusers
 update_bucket_file_allusers
-review_file_acl
-review_bucket_iam
+#review_file_acl
+#review_bucket_iam
 remove_bucket
