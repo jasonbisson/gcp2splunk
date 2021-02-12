@@ -11,7 +11,7 @@ gcloud logging read "logName:cloudaudit.googleapis.com%2Factivity" --organizatio
 }
 
 function stackdriver_folder () {
-export folder_list=$(gcloud alpha resource-manager folders list --format=[no-heading] --organization=$org_id |awk '{print $3}')
+export folder_list=$(gcloud resource-manager folders list --format=[no-heading] --organization=$org_id |awk '{print $3}')
 for x in "$folder_list"
 do
 gcloud logging read "logName:cloudaudit.googleapis.com%2Factivity" --folder=${x} --freshness=${FRESHNESS}d --format json
